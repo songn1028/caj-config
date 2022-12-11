@@ -28,12 +28,9 @@ spec:
         - name: "{{ template "spring-boot-caj-app.fullname" . }}"
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- if .Values.deployment.env }}
-          env:      
-          {{- range $name, $value := .Values.deployment.env }}
-          - name: {{ $name }}
-            value: {{ $value }}
-          {{- end }}
+          {{- with .Values.deployment.env }}
+          env:     
+          {{- toYaml . | nindent 10 }}
           {{- end }}
           ports:
           - containerPort: 8080
