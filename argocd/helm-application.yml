@@ -15,14 +15,8 @@ spec:
       parameters:
         - name: studenID
           value: ${STUDENT_ID}
-        - name: fullnameOverride
-          value: caj-${APP_NAME}
-        - name: image.repository
-          value: docker.io/d0ck3rj3ff/caj-${APP_NAME}
-        - name: image.tag
-          value: latest
         - name: version
           value: v1
       valueFiles:
-        - values.yaml
+        - ${APP_NAME}-values.yaml
   project: student

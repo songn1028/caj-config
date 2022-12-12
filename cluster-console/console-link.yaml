@@ -1,11 +1,11 @@
 apiVersion: console.openshift.io/v1
 kind: ConsoleLink
 metadata:
-  name: application-menu-caj-${STUDENT_ID}
+  name: application-menu-caj-speaker01
 spec:
   href: 'https://www.thsrc.com.tw/'
   location: ApplicationMenu
-  text: CAJ ${STUDENT_ID} Menu - THSRC website
+  text: CAJ speaker01 Menu - THSRC website
   applicationMenu:
-    section: CAJ ${STUDENT_ID} Menu - THSRC website
+    section: CAJ speaker01 Menu - THSRC website
     imageURL: https://www.thsrc.com.tw/Event/Logo.svg
